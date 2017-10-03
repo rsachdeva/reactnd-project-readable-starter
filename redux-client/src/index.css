@@ -1,0 +1,45 @@
+.up-vote {
+    color: gray;
+}
+.up-vote:hover {
+    color: darkgreen;
+}
+
+.down-vote {
+    color: gray;
+}
+.down-vote:hover {
+    color: red;
+}
+
+.delete-post {
+    color: gray;
+}
+
+.delete-post:hover {
+    color: red;
+}
+
+.edit-post {
+    color: gray;
+}
+
+.edit-post:hover {
+    color: forestgreen;
+}
+
+.delete-comment {
+    color: gray;
+}
+
+.delete-comment:hover {
+    color: red;
+}
+
+.edit-comment {
+    color: gray;
+}
+
+.edit-comment:hover {
+    color: forestgreen;
+}
