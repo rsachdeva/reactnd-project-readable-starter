@@ -1,26 +1,3 @@
-## Functionality
-
-This web app is designed to allow to New/Edit/Delete/Vote(UpVote/DownVote) for Posts and Comments associated with the Post
-in Specific Categories. The Categories/Posts/Comments work with the Developed existing Server Side using Async Calls.
-
-Posts and Comments are Sorted by Votes by default.
-For Posts it includes Drop Down Option - Sorting by Votes and Created At for Posts.
-
-The Main Posts Page reflects the Posts in all Categories and Filters by Category when Specific Category Heading is clicked.
-It has Create Post button for new post besides Edit and Delete Icons in the List of Posts.
-It has Voting buttons too.
-
-The Show Post Page shows Post Body and Associated Comments.
-It has Add Comment button to allow for new comment besides Edit and Delete Icons in the List of Comments.
-It has Voting buttons too.
-
-## Installation
-
-Use npm or yarn.
-
-npm install
-yarn start
-
 ## Front End Additions
 
 ```
@@ -40,7 +17,3 @@ yarn start
 
 Uses ES6/ES7 JS Style of code.
 This uses Redux Store to save state for All Actions in General. 
-
-## Copyright
-Please notify if you are directly using code from here. Thanks.
-Copyright © 2009-2017, Rohit Sachdeva
