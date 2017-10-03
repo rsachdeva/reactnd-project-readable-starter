@@ -17,13 +17,19 @@ It has Voting buttons too.
 ## Installation
 
 cd ./reactnd-project-readable-starter/api-server
+
 nodenv local 8.4.0 ( This step is optional; project tested with node version 8.4.0; nodenv is at https://github.com/nodenv/nodenv)
+
 npm install
+
 node server
 
 cd ./reactnd-project-readable-starter/redux-client
+
 nodenv local 8.4.0
+
 npm install
+
 npm start
 
 ## API Server
