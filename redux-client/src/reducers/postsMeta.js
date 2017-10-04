@@ -9,10 +9,11 @@ import {
   RECEIVE_CREATE_POST,
   REQUEST_UPDATE_POST,
   RECEIVE_UPDATE_POST,
+  RECEIVE_POST_DETAIL,
+  REQUEST_POST_DETAIL,
   POSTS_SORTING,
   BY_VOTES
-} from '../actions'
-import {RECEIVE_POST_DETAIL, REQUEST_POST_DETAIL} from "../actions/index"
+} from '../actions/types'
 import * as Helper from '../utils/helper'
 
 const initial = {

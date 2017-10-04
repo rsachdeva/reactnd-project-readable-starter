@@ -1,47 +1,18 @@
 import uuidv4 from 'uuid'
 import * as ReadableAPIUtil from '../utils/api'
-
-
-export const REQUEST_CATEGORIES = 'REQUEST_CATEGORIES'
-export const RECEIVE_CATEGORIES = 'RECEIVE_CATEGORIES'
-export const REQUEST_POSTS = 'REQUEST_POSTS'
-export const RECEIVE_POSTS = 'RECEIVE_POSTS'
-export const REQUEST_POST_DETAIL = 'REQUEST_POST'
-export const RECEIVE_POST_DETAIL = 'RECEIVE_POST'
-export const REQUEST_UPDATE_POST_VOTES = 'REQUEST_UPDATE_POST_VOTES'
-export const RECEIVE_UPDATE_POST_VOTES = 'RECEIVE_UPDATE_POST_VOTES'
-export const REQUEST_DELETE_POST = 'REQUEST_DELETE_POST'
-export const RECEIVE_DELETE_POST = 'RECEIVE_DELETE_POST'
-export const REQUEST_CREATE_POST = 'REQUEST_CREATE_POST'
-export const RECEIVE_CREATE_POST = 'RECEIVE_CREATE_POST'
-export const REQUEST_UPDATE_POST = 'REQUEST_UPDATE_POST'
-export const RECEIVE_UPDATE_POST = 'RECEIVE_UPDATE_POST'
-export const DELETE_PARENT_POST_COMMENTS = 'DELETE_PARENT_POST_COMMENTS'
-export const POSTS_SORTING = 'POSTS_SORTING'
-export const BY_VOTES = 'by_votes'
-export const BY_CREATED_AT = 'by_created_at'
-export const REQUEST_POST_COMMENTS = 'REQUEST_POST_COMMENTS'
-export const RECEIVE_POST_COMMENTS = 'RECEIVE_POST_COMMENTS'
-export const REQUEST_UPDATE_COMMENT_VOTES = 'REQUEST_UPDATE_COMMENT_VOTES'
-export const RECEIVE_UPDATE_COMMENT_VOTES = 'RECEIVE_UPDATE_COMMENT_VOTES'
-export const REQUEST_DELETE_COMMENT = 'REQUEST_DELETE_COMMENT'
-export const RECEIVE_DELETE_COMMENT = 'RECEIVE_DELETE_COMMENT'
-export const REQUEST_CREATE_COMMENT = 'REQUEST_CREATE_COMMENT'
-export const RECEIVE_CREATE_COMMENT = 'RECEIVE_CREATE_COMMENT'
-export const REQUEST_UPDATE_COMMENT = 'REQUEST_UPDATE_COMMENT'
-export const RECEIVE_UPDATE_COMMENT = 'RECEIVE_UPDATE_COMMENT'
+import * as ACTION_TYPES from './types'
 
 export const HOME = ''
 
 const requestCategories = () => {
   return {
-    type: REQUEST_CATEGORIES
+    type: ACTION_TYPES.REQUEST_CATEGORIES
   }
 }
 
 const receiveCategories = (categories) => {
   return {
-    type: RECEIVE_CATEGORIES,
+    type: ACTION_TYPES.RECEIVE_CATEGORIES,
     categories: categories
   }
 }
@@ -55,13 +26,13 @@ export const fetchCategories = () => (dispatch, getState) => {
 
 const requestPostDetail = () => {
   return {
-    type: REQUEST_POST_DETAIL
+    type: ACTION_TYPES.REQUEST_POST_DETAIL
   }
 }
 
 const receivePostDetail = (post) => {
   return {
-    type: RECEIVE_POST_DETAIL,
+    type: ACTION_TYPES.RECEIVE_POST_DETAIL,
     postDetail: post
   }
 }
@@ -76,26 +47,26 @@ export const fetchPostDetail = (postId) => (dispatch, getState) => {
 
 const requestPosts = () => {
   return {
-    type: REQUEST_POSTS
+    type: ACTION_TYPES.REQUEST_POSTS
   }
 }
 
 const receivePosts = (posts) => {
   return {
-    type: RECEIVE_POSTS,
+    type: ACTION_TYPES.RECEIVE_POSTS,
     posts: posts
   }
 }
 
 const requestUpdatePostVotes = () => {
   return {
-    type: REQUEST_UPDATE_POST_VOTES
+    type: ACTION_TYPES.REQUEST_UPDATE_POST_VOTES
   }
 }
 
 const receivedUpdatePostVotes = (post) => {
   return {
-    type: RECEIVE_UPDATE_POST_VOTES,
+    type: ACTION_TYPES.RECEIVE_UPDATE_POST_VOTES,
     post
   }
 }
@@ -109,13 +80,13 @@ export const updatePostVotes = (postId, voteOption) => (dispatch, getState) => {
 
 const requestDeletePost = () => {
   return {
-    type: REQUEST_DELETE_POST
+    type: ACTION_TYPES.REQUEST_DELETE_POST
   }
 }
 
 const receivedDeletePost = (currentPosts, deletedPostId) => {
   return {
-    type: RECEIVE_DELETE_POST,
+    type: ACTION_TYPES.RECEIVE_DELETE_POST,
     currentPosts,
     deletedPostId
   }
@@ -123,7 +94,7 @@ const receivedDeletePost = (currentPosts, deletedPostId) => {
 
 const deleteParentPostComments = (deletedPostId) => {
   return {
-    type: DELETE_PARENT_POST_COMMENTS,
+    type: ACTION_TYPES.DELETE_PARENT_POST_COMMENTS,
     deletedPostId
   }
 }
@@ -138,13 +109,13 @@ export const deletePost = (postId) => (dispatch, getState) => {
 
 const requestCreatePost = () => {
   return {
-    type: REQUEST_CREATE_POST
+    type: ACTION_TYPES.REQUEST_CREATE_POST
   }
 }
 
 const receivedCreatePost = (createdPost) => {
   return {
-    type: RECEIVE_CREATE_POST,
+    type: ACTION_TYPES.RECEIVE_CREATE_POST,
     createdPost
   }
 }
@@ -166,13 +137,13 @@ export const createPost = (newPost) => (dispatch, getState) => {
 
 const requestUpdatePost = () => {
   return {
-    type: REQUEST_UPDATE_POST
+    type: ACTION_TYPES.REQUEST_UPDATE_POST
   }
 }
 
 const receivedUpdatePost = (updatedPost) => {
   return {
-    type: RECEIVE_UPDATE_POST,
+    type: ACTION_TYPES.RECEIVE_UPDATE_POST,
     updatedPost
   }
 }
@@ -184,22 +155,22 @@ export const updatePost = (editPost) => (dispatch, getState) => {
   })
 }
 
-export const postsSorting = (sortBy = BY_VOTES) => {
+export const postsSorting = (sortBy = ACTION_TYPES.BY_VOTES) => {
   return {
-    type: POSTS_SORTING,
+    type: ACTION_TYPES.POSTS_SORTING,
     sortBy
   }
 }
 
 const requestPostComments = () => {
   return {
-    type: REQUEST_POST_COMMENTS
+    type: ACTION_TYPES.REQUEST_POST_COMMENTS
   }
 }
 
 const receivePostComments = (postId, comments) => {
   return {
-    type: RECEIVE_POST_COMMENTS,
+    type: ACTION_TYPES.RECEIVE_POST_COMMENTS,
     postId: postId,
     comments: comments
   }
@@ -237,13 +208,13 @@ export const fetchPostsAndPostComments = (activatedCategory = '') => (dispatch, 
 
 const requestUpdateCommentVotes = () => {
   return {
-    type: REQUEST_UPDATE_COMMENT_VOTES
+    type: ACTION_TYPES.REQUEST_UPDATE_COMMENT_VOTES
   }
 }
 
 const receivedUpdateCommentVotes = (postId, comment) => {
   return {
-    type: RECEIVE_UPDATE_COMMENT_VOTES,
+    type: ACTION_TYPES.RECEIVE_UPDATE_COMMENT_VOTES,
     postId,
     comment
   }
@@ -259,13 +230,13 @@ export const updateCommentVotes = (postId, commentId, voteOption) => (dispatch, 
 
 const requestDeleteComment = () => {
   return {
-    type: REQUEST_DELETE_COMMENT
+    type: ACTION_TYPES.REQUEST_DELETE_COMMENT
   }
 }
 
 const receivedDeleteComment = (postId, deletedCommentId) => {
   return {
-    type: RECEIVE_DELETE_COMMENT,
+    type: ACTION_TYPES.RECEIVE_DELETE_COMMENT,
     postId,
     deletedCommentId
   }
@@ -280,13 +251,13 @@ export const deleteComment = (postId, commentId) => (dispatch, getState) => {
 
 const requestCreateComment = () => {
   return {
-    type: REQUEST_CREATE_COMMENT
+    type: ACTION_TYPES.REQUEST_CREATE_COMMENT
   }
 }
 
 const receivedCreateComment = (postId, createdComment) => {
   return {
-    type: RECEIVE_CREATE_COMMENT,
+    type: ACTION_TYPES.RECEIVE_CREATE_COMMENT,
     postId,
     createdComment
   }
@@ -311,13 +282,13 @@ export const createComment = (postId, newComment) => (dispatch, getState) => {
 
 const requestUpdateComment = () => {
   return {
-    type: REQUEST_UPDATE_COMMENT
+    type: ACTION_TYPES.REQUEST_UPDATE_COMMENT
   }
 }
 
 const receivedUpdateComment = (postId, updatedComment) => {
   return {
-    type: RECEIVE_UPDATE_COMMENT,
+    type: ACTION_TYPES.RECEIVE_UPDATE_COMMENT,
     postId,
     updatedComment
   }

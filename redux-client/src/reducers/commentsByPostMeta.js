@@ -10,7 +10,7 @@ import {
   REQUEST_CREATE_COMMENT,
   REQUEST_UPDATE_COMMENT,
   RECEIVE_UPDATE_COMMENT
-} from '../actions'
+} from '../actions/types'
 import * as Helper from '../utils/helper'
 
 const initial = {

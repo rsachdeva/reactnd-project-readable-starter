@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link, NavLink} from 'react-router-dom'
 import PropTypes from 'prop-types'
-import {BY_VOTES, BY_CREATED_AT} from '../actions'
+import {BY_VOTES, BY_CREATED_AT} from '../actions/types'
 import Post from './PostSummaryOrDetailed'
 
 const Posts = (props) => {

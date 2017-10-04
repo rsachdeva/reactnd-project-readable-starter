@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import {  fetchCategories, fetchPostsAndPostComments, updatePostVotes, deletePost, postsSorting, BY_VOTES, BY_CREATED_AT } from '../actions'
+import { BY_VOTES, BY_CREATED_AT } from '../actions/types'
+import {  fetchCategories, fetchPostsAndPostComments, updatePostVotes, deletePost, postsSorting } from '../actions'
 import Posts from '../presenters/Posts'
 
 class PostsContainer extends Component {

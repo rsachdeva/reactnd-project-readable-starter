@@ -1,8 +1,5 @@
-import {
-  HOME,
-  REQUEST_CATEGORIES,
-  RECEIVE_CATEGORIES
-} from '../actions'
+import { REQUEST_CATEGORIES, RECEIVE_CATEGORIES } from '../actions/types'
+import { HOME } from '../actions'
 
 const initial = {
   isFetchingCategories: false,
